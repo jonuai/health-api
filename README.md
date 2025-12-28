@@ -56,10 +56,7 @@ service-health-api/
 The application is fully environment-driven.
 
 `.env` file:
-DB_USER=health
-DB_PASSWORD=health
-DB_HOST=db
-DB_NAME=healthdb
+
 
 
 > **Important:**  
@@ -127,7 +124,7 @@ This ensures:
 Data survives container restarts
 
 Database container can be safely recreated
-docker exec -it db-1 psql -U health -d healthdb
+docker exec -it db-1 psql -U username -d dbname 
 SELECT * FROM service_health;
 
 Common Failure Scenarios (Learning Focus)
